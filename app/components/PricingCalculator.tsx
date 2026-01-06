@@ -31,7 +31,7 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21, gstRate: 5 },
   },
   "Sprouted Ragi Flour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 40.16, packagingCost: 20, margin: 34.5, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 34.5, gstRate: 5 },
     "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 30, gstRate: 5 },
   },
   "Cashew Nuts": {
@@ -40,7 +40,7 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
   },
   "Black Rice Porridge Mix": {
     "per 350g": { purchaseCost: 80, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 26, gstRate: 5 },
-    "per 250g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
+    "per 250g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18.5, gstRate: 5 },
   },
   "Black Rice": {
     "per 1 kg": { purchaseCost: 180, shippingCost: 100, amazonReferral: 44, packagingCost: 20, margin: 12, gstRate: 5 },
