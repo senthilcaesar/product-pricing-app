@@ -14,7 +14,7 @@ interface ProductData {
   gstRate: number;
 }
 
-const PRODUCT_DEFAULTS: Record<string, Record<Unit, ProductData>> = {
+const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
   "Cane Jaggery Powder": {
     "per 1 kg": { purchaseCost: 50, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 15, gstRate: 5 },
     "per 500g": { purchaseCost: 25, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 15, gstRate: 5 },
@@ -28,6 +28,12 @@ const PRODUCT_DEFAULTS: Record<string, Record<Unit, ProductData>> = {
     "per 350g": { purchaseCost: 45.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 7, gstRate: 5 },
     "per 250g": { purchaseCost: 32.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 7, gstRate: 5 },
     "per 200g": { purchaseCost: 26, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 7, gstRate: 5 },
+  },
+  "Roasted Unsalted Peanuts": {
+    "per 350g": { purchaseCost: 45, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
+  },
+  "Roasted Salted Peanuts": {
+    "per 350g": { purchaseCost: 45, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
   },
   "Ragi Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21, gstRate: 5 },
@@ -53,9 +59,12 @@ const PRODUCT_DEFAULTS: Record<string, Record<Unit, ProductData>> = {
   "Black Rice Porridge Mix": {
     "per 1 kg": { purchaseCost: 228, shippingCost: 100, amazonReferral: 20.16, packagingCost: 20, margin: 23, gstRate: 5 },
     "per 500g": { purchaseCost: 114, shippingCost: 76, amazonReferral: 10.08, packagingCost: 20, margin: 23, gstRate: 5 },
-    "per 350g": { purchaseCost: 80, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 23, gstRate: 5 },
-    "per 250g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 14, gstRate: 5 },
+    "per 350g": { purchaseCost: 80, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 26, gstRate: 5 },
+    "per 250g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
     "per 200g": { purchaseCost: 45.6, shippingCost: 76, amazonReferral: 5.04, packagingCost: 20, margin: 23, gstRate: 5 },
+  },
+  "Black Rice": {
+    "per 1 kg": { purchaseCost: 180, shippingCost: 100, amazonReferral: 44, packagingCost: 20, margin: 12, gstRate: 5 },
   },
   "Rice Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
@@ -72,32 +81,35 @@ const PRODUCT_DEFAULTS: Record<string, Record<Unit, ProductData>> = {
     "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 24.5, gstRate: 5 },
   },
   "WheatFlour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 21.2, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
+    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 18, gstRate: 5 },
+    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 18, gstRate: 5 },
+    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 18, gstRate: 5 },
+    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 18, gstRate: 5 },
   },
   "Golden Maize Corn Flour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 21.2, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 50, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 22.5, gstRate: 5 },
+    "per 500g": { purchaseCost: 25, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 22.5, gstRate: 5 },
+    "per 350g": { purchaseCost: 17.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 22.5, gstRate: 5 },
+    "per 250g": { purchaseCost: 12.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 22.5, gstRate: 5 },
+    "per 200g": { purchaseCost: 10, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 22.5, gstRate: 5 },
   },
   "Jowar Atta Sorghum Flour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 21.2, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 70, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 20, gstRate: 5 },
+    "per 500g": { purchaseCost: 35, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 20, gstRate: 5 },
+    "per 350g": { purchaseCost: 24.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 20, gstRate: 5 },
+    "per 250g": { purchaseCost: 17.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 20, gstRate: 5 },
+    "per 200g": { purchaseCost: 14, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 20, gstRate: 5 },
   },
   "Pesarattu Dosa Mix Flour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 21.2, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 21.2, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 150, shippingCost: 100, amazonReferral: 14.16, packagingCost: 20, margin: 30, gstRate: 5 },
+    "per 500g": { purchaseCost: 75, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 30, gstRate: 5 },
+  },
+  "Kambu Dosa Mix": {
+    "per 500g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 31, gstRate: 5 },
+  },
+  "7-Grain Multi Grain Atta": {
+    "per 1 kg": { purchaseCost: 80, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 22, gstRate: 5 },
   },
   "Green Tea": {
     "per 1 kg": { purchaseCost: 800, shippingCost: 100, amazonReferral: 35.4, packagingCost: 20, margin: 29, gstRate: 5 },
@@ -135,7 +147,18 @@ export default function PricingCalculator() {
   const handleProductChange = (product: string) => {
     setProductName(product);
     if (product && PRODUCT_DEFAULTS[product]) {
-      const defaults = PRODUCT_DEFAULTS[product][unit];
+      let currentUnit = unit;
+      // Check if current unit exists for this product
+      if (!PRODUCT_DEFAULTS[product][currentUnit]) {
+        // Find first available unit
+        const availableUnits = Object.keys(PRODUCT_DEFAULTS[product]) as Unit[];
+        if (availableUnits.length > 0) {
+          currentUnit = availableUnits[0];
+          setUnit(currentUnit);
+        }
+      }
+
+      const defaults = PRODUCT_DEFAULTS[product][currentUnit];
       if (defaults) {
         setPurchaseCost(defaults.purchaseCost.toString());
         setShippingCost(defaults.shippingCost.toString());
@@ -434,11 +457,25 @@ Final Selling Price: ${formatCurrency(results.finalPrice)}
                   onChange={(e) => handleUnitChange(e.target.value as Unit)}
                   className="w-full px-4 py-2 border border-zinc-300 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="per 1 kg">per 1 kg</option>
-                  <option value="per 500g">per 500g</option>
-                  <option value="per 350g">per 350g</option>
-                  <option value="per 250g">per 250g</option>
-                  <option value="per 200g">per 200g</option>
+                  {productName && PRODUCT_DEFAULTS[productName]
+                    ? (Object.keys(PRODUCT_DEFAULTS[productName]) as Unit[]).map(
+                        (u) => (
+                          <option key={u} value={u}>
+                            {u}
+                          </option>
+                        )
+                      )
+                    : [
+                        "per 1 kg",
+                        "per 500g",
+                        "per 350g",
+                        "per 250g",
+                        "per 200g",
+                      ].map((u) => (
+                        <option key={u} value={u}>
+                          {u}
+                        </option>
+                      ))}
                 </select>
               </div>
 
