@@ -19,7 +19,7 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
     "per 1 kg": { purchaseCost: 50, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 15, gstRate: 5 },
   },
   "Peanuts": {
-    "per 1 kg": { purchaseCost: 130, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 13, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 130, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 10, gstRate: 5 },
   },
   "Roasted Unsalted Peanuts": {
     "per 350g": { purchaseCost: 45, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
@@ -31,7 +31,7 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21, gstRate: 5 },
   },
   "Sprouted Ragi Flour": {
-    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 40.16, packagingCost: 20, margin: 26.2, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 40.16, packagingCost: 20, margin: 34.5, gstRate: 5 },
     "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 30, gstRate: 5 },
   },
   "Cashew Nuts": {
