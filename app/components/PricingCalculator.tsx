@@ -17,17 +17,9 @@ interface ProductData {
 const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
   "Cane Jaggery Powder": {
     "per 1 kg": { purchaseCost: 50, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 15, gstRate: 5 },
-    "per 500g": { purchaseCost: 25, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 15, gstRate: 5 },
-    "per 350g": { purchaseCost: 17.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 15, gstRate: 5 },
-    "per 250g": { purchaseCost: 12.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 15, gstRate: 5 },
-    "per 200g": { purchaseCost: 10, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 15, gstRate: 5 },
   },
   "Peanuts": {
-    "per 1 kg": { purchaseCost: 130, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 7, gstRate: 5 },
-    "per 500g": { purchaseCost: 65, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 7, gstRate: 5 },
-    "per 350g": { purchaseCost: 45.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 7, gstRate: 5 },
-    "per 250g": { purchaseCost: 32.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 7, gstRate: 5 },
-    "per 200g": { purchaseCost: 26, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 7, gstRate: 5 },
+    "per 1 kg": { purchaseCost: 130, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 13, gstRate: 5 },
   },
   "Roasted Unsalted Peanuts": {
     "per 350g": { purchaseCost: 45, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
@@ -37,72 +29,38 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
   },
   "Ragi Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 21, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 21, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 21, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 21, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 21, gstRate: 5 },
   },
   "Sprouted Ragi Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 40.16, packagingCost: 20, margin: 26.2, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 22, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 4.95, packagingCost: 20, margin: 22, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 22, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 2.83, packagingCost: 20, margin: 22, gstRate: 5 },
+    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 30, gstRate: 5 },
   },
   "Cashew Nuts": {
     "per 1 kg": { purchaseCost: 920, shippingCost: 100, amazonReferral: 225.27, packagingCost: 20, margin: 8.3, gstRate: 5 },
     "per 500g": { purchaseCost: 460, shippingCost: 76, amazonReferral: 107.14, packagingCost: 20, margin: 7.1, gstRate: 5 },
-    "per 350g": { purchaseCost: 322, shippingCost: 76, amazonReferral: 75, packagingCost: 20, margin: 7.1, gstRate: 5 },
-    "per 250g": { purchaseCost: 230, shippingCost: 76, amazonReferral: 53.57, packagingCost: 20, margin: 7.1, gstRate: 5 },
-    "per 200g": { purchaseCost: 184, shippingCost: 76, amazonReferral: 42.86, packagingCost: 20, margin: 7.1, gstRate: 5 },
   },
   "Black Rice Porridge Mix": {
-    "per 1 kg": { purchaseCost: 228, shippingCost: 100, amazonReferral: 20.16, packagingCost: 20, margin: 23, gstRate: 5 },
-    "per 500g": { purchaseCost: 114, shippingCost: 76, amazonReferral: 10.08, packagingCost: 20, margin: 23, gstRate: 5 },
     "per 350g": { purchaseCost: 80, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 26, gstRate: 5 },
     "per 250g": { purchaseCost: 60, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 200g": { purchaseCost: 45.6, shippingCost: 76, amazonReferral: 5.04, packagingCost: 20, margin: 23, gstRate: 5 },
   },
   "Black Rice": {
     "per 1 kg": { purchaseCost: 180, shippingCost: 100, amazonReferral: 44, packagingCost: 20, margin: 12, gstRate: 5 },
   },
   "Rice Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 18, gstRate: 5 },
   },
   "Steamed Rice Flour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 24.5, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 24.5, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 24.5, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 24.5, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 24.5, gstRate: 5 },
   },
   "WheatFlour": {
     "per 1 kg": { purchaseCost: 60, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 500g": { purchaseCost: 30, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 350g": { purchaseCost: 21, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 250g": { purchaseCost: 15, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 18, gstRate: 5 },
-    "per 200g": { purchaseCost: 12, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 18, gstRate: 5 },
   },
   "Golden Maize Corn Flour": {
     "per 1 kg": { purchaseCost: 50, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 22.5, gstRate: 5 },
-    "per 500g": { purchaseCost: 25, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 22.5, gstRate: 5 },
-    "per 350g": { purchaseCost: 17.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 22.5, gstRate: 5 },
-    "per 250g": { purchaseCost: 12.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 22.5, gstRate: 5 },
-    "per 200g": { purchaseCost: 10, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 22.5, gstRate: 5 },
   },
   "Jowar Atta Sorghum Flour": {
     "per 1 kg": { purchaseCost: 70, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 20, gstRate: 5 },
-    "per 500g": { purchaseCost: 35, shippingCost: 76, amazonReferral: 3.54, packagingCost: 20, margin: 20, gstRate: 5 },
-    "per 350g": { purchaseCost: 24.5, shippingCost: 76, amazonReferral: 2.48, packagingCost: 20, margin: 20, gstRate: 5 },
-    "per 250g": { purchaseCost: 17.5, shippingCost: 76, amazonReferral: 1.77, packagingCost: 20, margin: 20, gstRate: 5 },
-    "per 200g": { purchaseCost: 14, shippingCost: 76, amazonReferral: 1.42, packagingCost: 20, margin: 20, gstRate: 5 },
   },
   "Pesarattu Dosa Mix Flour": {
-    "per 1 kg": { purchaseCost: 150, shippingCost: 100, amazonReferral: 14.16, packagingCost: 20, margin: 30, gstRate: 5 },
     "per 500g": { purchaseCost: 75, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 30, gstRate: 5 },
   },
   "Kambu Dosa Mix": {
@@ -112,10 +70,6 @@ const PRODUCT_DEFAULTS: Record<string, Partial<Record<Unit, ProductData>>> = {
     "per 1 kg": { purchaseCost: 80, shippingCost: 100, amazonReferral: 7.08, packagingCost: 20, margin: 22, gstRate: 5 },
   },
   "Green Tea": {
-    "per 1 kg": { purchaseCost: 800, shippingCost: 100, amazonReferral: 35.4, packagingCost: 20, margin: 29, gstRate: 5 },
-    "per 500g": { purchaseCost: 400, shippingCost: 76, amazonReferral: 17.7, packagingCost: 20, margin: 29, gstRate: 5 },
-    "per 350g": { purchaseCost: 280, shippingCost: 76, amazonReferral: 12.39, packagingCost: 20, margin: 29, gstRate: 5 },
-    "per 250g": { purchaseCost: 200, shippingCost: 76, amazonReferral: 8.85, packagingCost: 20, margin: 29, gstRate: 5 },
     "per 200g": { purchaseCost: 160, shippingCost: 76, amazonReferral: 7.08, packagingCost: 20, margin: 29, gstRate: 5 },
   },
 };
